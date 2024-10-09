@@ -1,1 +1,1 @@
-# ES6 Promises, Async ans Await
+# ES6 Promises, Async and Await
