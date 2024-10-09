@@ -1,4 +1,5 @@
 // a function that returns a promise
 export default function getResponseFromAPI() {
-  return (new Promise((_resolve, _reject) => {}));
+  /* eslint-disable no-unused-vars */
+  return (new Promise((resolve, reject) => {}));
 }
