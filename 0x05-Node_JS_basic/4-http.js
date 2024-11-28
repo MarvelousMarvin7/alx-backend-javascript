@@ -10,7 +10,7 @@ app.on('request', (_, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.setHeader('Content-Length', responseText.length);
   res.statusCode = 200;
-  res.write(Buffer.from(responseText));
+  res.end(responseText);
 });
 
 app.listen(port, hostname, () => {
