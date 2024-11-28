@@ -5,9 +5,12 @@ const port = 1245;
 const app = http.createServer();
 
 app.on('request', (_, res) => {
-  res.statusCode = 200;
+  const responseText = 'Hello Holberton School!';
+
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Holberton School!');
+  res.setHeader('Content-Length', responseText.length);
+  res.statusCode = 200;
+  res.write(Buffer.from(responseText));
 });
 
 app.listen(port, hostname, () => {
